@@ -1,6 +1,6 @@
-# Node.js Study Lab
+# node-studies
 
-Learning **Node.js / TypeScript** for **Applied AI Engineering**, designed for senior **C#** developers.
+Node.js / TypeScript learning lab for **Applied AI Engineering**, designed for senior **C#** developers.
 
 ## Quick Start
 
