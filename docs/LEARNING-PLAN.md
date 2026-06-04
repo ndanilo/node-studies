@@ -22,18 +22,18 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 1 — JavaScript Fundamentals (C# Lens)
 > Goal: stop translating C# line-by-line; know JS quirks.
 
-- [ ] `let` vs `const` vs `var`
-- [ ] Types: `number`, `string`, `boolean`, `bigint`, `symbol`
-- [ ] `null` vs `undefined`
-- [ ] `==` vs `===` (always use strict)
-- [ ] Truthy / falsy values
-- [ ] Objects vs Maps; arrays vs Lists
-- [ ] Destructuring (`const { x } = obj`)
-- [ ] Spread / rest (`...args`)
-- [ ] Template literals (`` `Hello ${name}` ``)
-- [ ] Arrow functions vs regular functions (`this` binding!)
-- [ ] `for...of` vs `for...in`
-- [ ] JSON.parse / JSON.stringify vs System.Text.Json
+- [x] `let` vs `const` vs `var`
+- [x] Types: `number`, `string`, `boolean`, `bigint`, `symbol`
+- [x] `null` vs `undefined`
+- [x] `==` vs `===` (always use strict)
+- [x] Truthy / falsy values
+- [x] Objects vs Maps; arrays vs Lists
+- [x] Destructuring (`const { x } = obj`)
+- [x] Spread / rest (`...args`)
+- [x] Template literals (`` `Hello ${name}` ``)
+- [x] Arrow functions vs regular functions (`this` binding!)
+- [x] `for...of` vs `for...in`
+- [x] JSON.parse / JSON.stringify vs System.Text.Json
 
 **Exercise:** Rewrite a small C# console app (e.g. word counter) in `src/phase-1/`.
 
@@ -71,7 +71,28 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 4 — TypeScript Deep Dive
+## Phase 4 — File I/O & Streams
+> Goal: read/write files and work with streams — like `System.IO`; foundation for LLM streaming and RAG doc ingestion.
+
+- [ ] `node:fs` and `node:fs/promises` — prefer async; avoid sync I/O on servers
+- [ ] `readFile` / `writeFile` — `File.ReadAllText` / `File.WriteAllText` equivalent
+- [ ] Paths with `node:path` — `join`, `resolve`, `basename` (like `Path.Combine`)
+- [ ] `import.meta.url` + `fileURLToPath` — `__dirname` equivalent in ESM
+- [ ] `Buffer` — byte data (like `byte[]`); encoding (`utf8`, `base64`)
+- [ ] Read/write streams — `createReadStream`, `createWriteStream` (like `FileStream`)
+- [ ] `pipe` and `stream.promises.pipeline` — chain streams without loading entire file into memory
+- [ ] Backpressure (high level — why listeners wait for `drain`)
+- [ ] Line-by-line reading with `readline` (like `StreamReader.ReadLine`)
+- [ ] `fs.watch` — brief; file change notifications (like `FileSystemWatcher`)
+- [ ] Applied AI: load prompt templates from disk; stream model output to a file; chunk large docs for RAG
+
+**Exercise:** Read a text file, count lines/words, write a summary report; then redo it with streams for a large file in `src/phase-4/`.
+
+**Cursor prompt:** *"Teach me Phase 4 from LEARNING-PLAN. File I/O and streams with C# System.IO comparison."*
+
+---
+
+## Phase 5 — TypeScript Deep Dive
 > Goal: leverage types like C#; know where they differ.
 
 - [ ] `tsconfig.json` — `strict`, `module`, `moduleResolution`
@@ -88,7 +109,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 5 — Configuration & Secrets (Applied AI)
+## Phase 6 — Configuration & Secrets (Applied AI)
 > Goal: production-ready config for API keys and model settings.
 
 - [ ] `process.env` and `.env` files
@@ -102,7 +123,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 6 — Error Handling & Debugging
+## Phase 7 — Error Handling & Debugging
 > Goal: find bugs as fast as in Visual Studio.
 
 - [ ] `Error`, custom errors, `cause` chain
@@ -117,7 +138,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 7 — HTTP Clients & Small APIs
+## Phase 8 — HTTP Clients & Small APIs
 > Goal: call LLM APIs and expose your own endpoints.
 
 - [ ] Native `fetch` in Node 18+
@@ -131,7 +152,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 8 — Applied AI Patterns (Node Ecosystem)
+## Phase 9 — Applied AI Patterns (Node Ecosystem)
 > Goal: confidence in real AI engineering repos.
 
 - [ ] OpenAI / Anthropic SDK usage in Node
@@ -143,11 +164,11 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 - [ ] Agent loops (plan → act → observe)
 - [ ] Evals and logging traces
 
-**Exercise:** CLI agent in `src/phase-8/` that uses tools and streams output.
+**Exercise:** CLI agent in `src/phase-9/` that uses tools and streams output.
 
 ---
 
-## Phase 9 — Testing & Quality
+## Phase 10 — Testing & Quality
 > Goal: same rigor as xUnit/NUnit in C#.
 
 - [ ] Vitest or Jest basics
@@ -158,7 +179,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 
 ---
 
-## Phase 10 — Deployment & Ops (Overview)
+## Phase 11 — Deployment & Ops (Overview)
 > Goal: know how Node AI services run in prod.
 
 - [ ] `node dist/index.js` vs `tsx` for dev only
@@ -185,6 +206,7 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 | 2 | 2–3 |
 | 3 | 4–5 |
 | 4 | 6–7 |
-| 5+ | 8–10 (Applied AI focus) |
+| 5 | 8 |
+| 6+ | 9–11 (Applied AI focus) |
 
-Adjust based on depth — you're senior in C#, so Phases 0–4 may go faster than Phases 8–10.
+Adjust based on depth — you're senior in C#, so Phases 0–5 may go faster than Phases 9–11.

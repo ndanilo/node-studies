@@ -16,7 +16,7 @@ npm run env-demo
 | Path | Purpose |
 |------|---------|
 | `.cursor/rules/` | Cursor AI rules — C# ↔ JS comparisons, auto-loaded in this project |
-| `docs/LEARNING-PLAN.md` | 10-phase curriculum with checkboxes |
+| `docs/LEARNING-PLAN.md` | 11-phase curriculum with checkboxes |
 | `docs/RULE-TEMPLATE.md` | Template for adding new rules as you learn |
 | `src/phase-N/` | Hands-on exercises per phase |
 
