@@ -11,9 +11,9 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 - [x] Install Node.js LTS (20 or 22) — verify with `node -v` and `npm -v`
 - [x] Understand `package.json`, `npm install`, `npm run`
 - [x] Run first script: `src/phase-0/hello.ts`
-- [ ] Configure debugger (`.vscode/launch.json`)
-- [ ] Read env vars with `dotenv` — see `src/phase-0/env-demo.ts`
-- [ ] Gitignore: `node_modules/`, `.env`, `dist/`
+- [x] Configure debugger (`.vscode/launch.json`)
+- [x] Read env vars with `dotenv` — see `src/phase-0/env-demo.ts`
+- [x] Gitignore: `node_modules/`, `.env`, `dist/`
 
 **Cursor prompt:** *"Teach me Phase 0 from LEARNING-PLAN. I'm from C# — walk me through setup and env vars."*
 

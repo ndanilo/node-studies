@@ -6,6 +6,8 @@
   "scripts": {
     "hello": "tsx src/phase-0/hello.ts",
     "env-demo": "tsx src/phase-0/env-demo.ts",
+    "phase1": "tsx src/phase-1/fundamentals.ts",
+    "word-counter": "tsx src/phase-1/word-counter.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
