@@ -1,0 +1,62 @@
+---
+description: C# to JavaScript core concepts — types, classes, modules, async
+globs: "**/*.{js,mjs,cjs,ts}"
+alwaysApply: false
+---
+
+# C# → JavaScript Core
+
+## Types & Conversions
+
+| C# | JavaScript / TypeScript |
+|----|-------------------------|
+| `int`, `double`, `bool` | `number`, `boolean` (no separate int type) |
+| `string` | `string` |
+| `null` | `null` **and** `undefined` (two "empty" values) |
+| `var x = ...` (inferred) | `let x = ...` or `const x = ...` |
+| `const` / `readonly` | `const` (objects still mutable; binding is frozen) |
+| `(int)s` cast | `Number(s)`, `parseInt(s, 10)`, `String(n)` |
+| `Convert.ToInt32(s)` | `parseInt(s, 10)` or `Number(s)` |
+| `x?.Prop` | `x?.prop` (same optional chaining) |
+| `x ?? default` | `x ?? default` (same nullish coalescing) |
+
+**Strict equality:** always prefer `===` / `!==` (C# `==` is closer to `===`, not `==`).
+
+## Classes & OOP
+
+| C# | JS/TS |
+|----|-------|
+| `class Foo : Bar` | `class Foo extends Bar` |
+| `public` (default) | no keyword needed |
+| `private` field | `#field` (private) or `private field` in TS |
+| Constructor | `constructor(...) { }` |
+| `interface IFoo` | `interface IFoo` (TS only; erased at runtime) |
+| `record` / init-only | plain object + `as const` or TS `readonly` |
+| `static` | `static` (same) |
+| `async Task<T>` | `async function(): Promise<T>` |
+
+## Modules (not namespaces)
+
+- C#: `namespace` + `using` → JS: `import` / `export` (ESM) or `require` (CJS).
+- Prefer **ESM** (`import`/`export`) in new code; Node supports it via `"type": "module"` in `package.json`.
+- No `using` aliases — use named imports: `import { foo } from './foo.js'`.
+
+## Async
+
+| C# | JS/TS |
+|----|-------|
+| `async Task` | `async function` → returns `Promise<void>` |
+| `await x` | `await x` (same syntax) |
+| `Task.WhenAll` | `Promise.all([...])` |
+| `Task.WhenAny` | `Promise.race([...])` |
+| `CancellationToken` | `AbortController` + `signal` |
+
+## Collections
+
+| C# | JS/TS |
+|----|-------|
+| `List<T>` | `T[]` or `Array<T>` |
+| `Dictionary<K,V>` | `Map<K,V>` or plain `Record<K,V>` / `{ [key: string]: V }` |
+| `HashSet<T>` | `Set<T>` |
+| LINQ `.Where().Select()` | `.filter().map()` |
+| `foreach` | `for (const x of arr)` |

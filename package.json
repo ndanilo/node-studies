@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-study",
+  "version": "1.0.0",
+  "description": "Node.js & TypeScript learning lab for C# developers — Applied AI focus",
+  "type": "module",
+  "scripts": {
+    "hello": "tsx src/phase-0/hello.ts",
+    "env-demo": "tsx src/phase-0/env-demo.ts",
+    "dev": "tsx watch src/phase-0/hello.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["nodejs", "typescript", "learning", "applied-ai"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "zod": "^3.24.0"
+  }
+}

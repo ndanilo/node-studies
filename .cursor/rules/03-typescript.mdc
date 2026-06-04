@@ -1,0 +1,49 @@
+---
+description: TypeScript for C# developers — types, generics, strict mode
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# TypeScript for C# Devs
+
+TypeScript is **structural typing** (duck typing). C# is **nominal typing** (name matters).
+
+## Quick Mapping
+
+| C# | TypeScript |
+|----|------------|
+| `string`, `int`, `bool` | `string`, `number`, `boolean` |
+| `T?` nullable | `T \| null \| undefined` or `T?` (with `strictNullChecks`) |
+| `List<T>` | `T[]` |
+| `Dictionary<string, int>` | `Record<string, number>` |
+| `interface IFoo` | `interface Foo` (no `I` prefix convention) |
+| `class Foo : IFoo` | `class Foo implements FooInterface` |
+| `where T : class` | `<T extends object>` |
+| `enum Color { Red, Green }` | `enum Color { Red, Green }` or prefer union `'red' \| 'green'` |
+| `var` (inferred) | let TypeScript infer, or annotate explicitly |
+| `dynamic` | `unknown` (safe) or `any` (escape hatch — avoid) |
+| `partial class` / source generators | not applicable |
+| Attributes `[Required]` | Zod schemas, class-validator, or TS types only |
+
+## Generics — Same Idea
+
+```typescript
+function first<T>(items: T[]): T | undefined {
+  return items[0];
+}
+```
+
+## Union Types (no direct C# equivalent until recent)
+
+```typescript
+type Result = { ok: true; data: string } | { ok: false; error: string };
+```
+
+## Strict Mode (enable in tsconfig.json)
+
+- `strict: true` — like nullable reference types + more
+- Prefer `unknown` over `any` in catch blocks and external data
+
+## Runtime vs Compile Time
+
+**Critical:** TypeScript types are **erased at runtime**. Validation (Zod, io-ts) is needed for API/LLM JSON responses — like FluentValidation at runtime, not just compile time.

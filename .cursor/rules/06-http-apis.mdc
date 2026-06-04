@@ -1,0 +1,45 @@
+---
+description: HTTP clients and APIs — fetch/axios vs HttpClient in C#
+globs: "**/*.{js,ts}"
+alwaysApply: false
+---
+
+# HTTP & APIs
+
+## C# → Node
+
+| C# | Node / TS |
+|----|-----------|
+| `HttpClient` | native `fetch()` (Node 18+) or `axios` |
+| `GetAsync(url)` | `fetch(url)` |
+| `PostAsJsonAsync(url, body)` | `fetch(url, { method: 'POST', headers, body: JSON.stringify(body) })` |
+| `ReadFromJsonAsync<T>()` | `(await res.json()) as T` + runtime validation |
+| `HttpClientFactory` | create reusable client module or use `axios.create()` |
+| `[ApiController]` + routes | Express, Fastify, Hono, or NestJS (closest to ASP.NET MVC) |
+
+## Minimal fetch Example
+
+```typescript
+const res = await fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ model: 'gpt-4o', messages: [{ role: 'user', content: 'Hi' }] }),
+});
+
+if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+const data = await res.json();
+```
+
+## Streaming (common in Applied AI)
+
+- C#: `IAsyncEnumerable<T>` / `ReadAsStreamAsync`
+- Node: `response.body` is a `ReadableStream`; iterate with `for await (const chunk of stream)`
+
+## Server Side
+
+- **Express** — most tutorials; middleware pipeline like ASP.NET middleware.
+- **Fastify** — faster, schema validation built-in.
+- **NestJS** — Angular-style DI; closest mental model to ASP.NET Core for C# devs.

@@ -1,0 +1,43 @@
+---
+description: Node tooling — npm, package.json, scripts, and project layout
+globs: "package.json"
+alwaysApply: false
+---
+
+# Node Tooling (vs .NET CLI)
+
+| .NET | Node |
+|------|------|
+| `dotnet new` | `npm init`, starter templates, or clone repo |
+| `dotnet restore` | `npm install` |
+| `dotnet add package X` | `npm install X` |
+| `dotnet run` | `npm start` or `node dist/index.js` |
+| `dotnet build` | `tsc` (TypeScript compile) |
+| `dotnet test` | `npm test` (vitest/jest) |
+| `*.csproj` | `package.json` |
+| `nuget.config` | `.npmrc` |
+| Solution / projects | monorepo (optional); usually single `package.json` |
+
+## package.json Scripts
+
+```json
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  }
+}
+```
+
+## Key Files
+
+- `package.json` — dependencies + scripts (like csproj + Program.cs entry)
+- `package-lock.json` — lock file (commit it; like packages.lock.json)
+- `node_modules/` — restored packages (like NuGet cache + local refs; **gitignore**)
+- `tsconfig.json` — TypeScript compiler options (like LangVersion + nullable settings)
+
+## ESM vs CJS
+
+- `"type": "module"` → use `import`/`export`; file extensions matter (`.js` in imports after compile).
+- Without it → CommonJS `require()` (legacy; many AI SDK examples still use it).

@@ -1,0 +1,55 @@
+---
+description: Error handling and debugging in Node.js vs C#
+globs: "**/*.{js,ts,mjs,cjs}"
+alwaysApply: false
+---
+
+# Errors & Debugging
+
+## Error Types
+
+| C# | JS/TS |
+|----|-------|
+| `throw new Exception("msg")` | `throw new Error("msg")` |
+| `try/catch/finally` | same syntax |
+| Custom: `class MyEx : Exception` | `class MyError extends Error` |
+| `catch (SpecificException ex)` | no typed catch — check `instanceof` or error codes |
+| `AggregateException` | `Promise.all` rejects with first error; use `Promise.allSettled` |
+
+## Custom Errors
+
+```typescript
+class ConfigError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ConfigError';
+  }
+}
+```
+
+## Async Errors
+
+- Unhandled promise rejections crash Node (like unobserved `Task` exceptions).
+- Always `await` or `.catch()` on promises.
+- Express/Fastify: use error middleware (like ASP.NET exception filters).
+
+## Debugging
+
+| C# | Node |
+|----|------|
+| Visual Studio debugger | VS Code / Cursor debugger (F5) |
+| `Debugger.Break()` | `debugger;` statement |
+| `Console.WriteLine` | `console.log`, `console.error`, `console.debug` |
+| Structured logging (Serilog) | `pino`, `winston` |
+| `dotnet watch run` | `node --watch`, `tsx watch`, `nodemon` |
+
+## `.vscode/launch.json` Pattern
+
+Use `"type": "node"`, point `"program"` at entry file, set `"envFile": "${workspaceFolder}/.env"`.
+
+## Applied AI: LLM Error Patterns
+
+- Rate limits (429) → retry with exponential backoff
+- Timeouts → `AbortSignal.timeout(ms)` or `AbortController`
+- Invalid JSON from model → parse in try/catch, validate with Zod
+- Log request id / model name, never log API keys
