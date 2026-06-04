@@ -5,21 +5,25 @@
       "type": "node",
       "request": "launch",
       "name": "Debug current TS file",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/tsx/dist/cli.mjs",
-      "args": ["${file}"],
+      "program": "${file}",
+      "runtimeExecutable": "tsx",
       "cwd": "${workspaceFolder}",
       "envFile": "${workspaceFolder}/.env",
-      "skipFiles": ["<node_internals>/**"]
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Debug hello.ts",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/tsx/dist/cli.mjs",
-      "args": ["${workspaceFolder}/src/phase-0/hello.ts"],
+      "program": "${workspaceFolder}/src/phase-0/hello.ts",
+      "runtimeExecutable": "tsx",
       "cwd": "${workspaceFolder}",
       "envFile": "${workspaceFolder}/.env",
-      "skipFiles": ["<node_internals>/**"]
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
     }
   ]
 }
