@@ -1,0 +1,4 @@
+Hello from Phase 4.
+Applied AI reads prompt templates from disk.
+Streams handle large documents without loading everything into memory.
+Node fs/promises maps to File.ReadAllText in C#.

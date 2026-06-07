@@ -42,14 +42,14 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 2 — Functions, Classes & Modules
 > Goal: structure code like you would in C# but idiomatically.
 
-- [ ] Function declarations vs expressions
-- [ ] Default parameters and optional params
-- [ ] Rest parameters (`...items`)
-- [ ] Classes: constructor, extends, static, private `#field`
-- [ ] Prototypes (brief — know they exist under the hood)
-- [ ] ESM: `import` / `export` (prefer over CommonJS `require`)
-- [ ] Barrel exports (`index.ts` re-exporting)
-- [ ] No namespaces — use modules instead
+- [x] Function declarations vs expressions
+- [x] Default parameters and optional params
+- [x] Rest parameters (`...items`)
+- [x] Classes: constructor, extends, static, private `#field`
+- [x] Prototypes (brief — know they exist under the hood)
+- [x] ESM: `import` / `export` (prefer over CommonJS `require`)
+- [x] Barrel exports (`index.ts` re-exporting)
+- [x] No namespaces — use modules instead
 
 **Exercise:** Port a C# service class + interface to TS in `src/phase-2/`.
 
@@ -58,14 +58,14 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 3 — Async & Concurrency
 > Goal: confident with Promises before touching LLM streaming.
 
-- [ ] Callbacks (historical context only)
-- [ ] Promises: `.then()`, `.catch()`, `Promise.all`, `Promise.race`, `Promise.allSettled`
-- [ ] `async` / `await` (maps directly to C#)
-- [ ] Error propagation in async chains
-- [ ] `setTimeout` / `setInterval` vs `Task.Delay`
-- [ ] `AbortController` for cancellation
-- [ ] Event loop (high level — why CPU-bound work blocks)
-- [ ] Streaming with `async` iterators
+- [x] Callbacks (historical context only)
+- [x] Promises: `.then()`, `.catch()`, `Promise.all`, `Promise.race`, `Promise.allSettled`
+- [x] `async` / `await` (maps directly to C#)
+- [x] Error propagation in async chains
+- [x] `setTimeout` / `setInterval` vs `Task.Delay`
+- [x] `AbortController` for cancellation
+- [x] Event loop (high level — why CPU-bound work blocks)
+- [x] Streaming with `async` iterators
 
 **Exercise:** Fetch JSON from a public API with timeout + retry in `src/phase-3/`.
 
@@ -74,17 +74,17 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 4 — File I/O & Streams
 > Goal: read/write files and work with streams — like `System.IO`; foundation for LLM streaming and RAG doc ingestion.
 
-- [ ] `node:fs` and `node:fs/promises` — prefer async; avoid sync I/O on servers
-- [ ] `readFile` / `writeFile` — `File.ReadAllText` / `File.WriteAllText` equivalent
-- [ ] Paths with `node:path` — `join`, `resolve`, `basename` (like `Path.Combine`)
-- [ ] `import.meta.url` + `fileURLToPath` — `__dirname` equivalent in ESM
-- [ ] `Buffer` — byte data (like `byte[]`); encoding (`utf8`, `base64`)
-- [ ] Read/write streams — `createReadStream`, `createWriteStream` (like `FileStream`)
-- [ ] `pipe` and `stream.promises.pipeline` — chain streams without loading entire file into memory
-- [ ] Backpressure (high level — why listeners wait for `drain`)
-- [ ] Line-by-line reading with `readline` (like `StreamReader.ReadLine`)
-- [ ] `fs.watch` — brief; file change notifications (like `FileSystemWatcher`)
-- [ ] Applied AI: load prompt templates from disk; stream model output to a file; chunk large docs for RAG
+- [x] `node:fs` and `node:fs/promises` — prefer async; avoid sync I/O on servers
+- [x] `readFile` / `writeFile` — `File.ReadAllText` / `File.WriteAllText` equivalent
+- [x] Paths with `node:path` — `join`, `resolve`, `basename` (like `Path.Combine`)
+- [x] `import.meta.url` + `fileURLToPath` — `__dirname` equivalent in ESM
+- [x] `Buffer` — byte data (like `byte[]`); encoding (`utf8`, `base64`)
+- [x] Read/write streams — `createReadStream`, `createWriteStream` (like `FileStream`)
+- [x] `pipe` and `stream.promises.pipeline` — chain streams without loading entire file into memory
+- [x] Backpressure (high level — why listeners wait for `drain`)
+- [x] Line-by-line reading with `readline` (like `StreamReader.ReadLine`)
+- [x] `fs.watch` — brief; file change notifications (like `FileSystemWatcher`)
+- [x] Applied AI: load prompt templates from disk; stream model output to a file; chunk large docs for RAG
 
 **Exercise:** Read a text file, count lines/words, write a summary report; then redo it with streams for a large file in `src/phase-4/`.
 
