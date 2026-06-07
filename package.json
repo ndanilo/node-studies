@@ -10,6 +10,8 @@
     "word-counter": "tsx src/phase-1/word-counter.ts",
     "phase2": "tsx src/phase-2/fundamentals.ts",
     "phase2-exercise": "tsx src/phase-2/exercise.ts",
+    "phase3": "tsx src/phase-3/fundamentals.ts",
+    "phase3-exercise": "tsx src/phase-3/exercise.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
