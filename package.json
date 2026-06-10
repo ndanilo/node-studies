@@ -14,6 +14,8 @@
     "phase3-exercise": "tsx src/phase-3/exercise.ts",
     "phase4": "tsx src/phase-4/fundamentals.ts",
     "phase4-exercise": "tsx src/phase-4/exercise.ts",
+    "phase5": "tsx src/phase-5/fundamentals.ts",
+    "phase5-exercise": "tsx src/phase-5/exercise.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"

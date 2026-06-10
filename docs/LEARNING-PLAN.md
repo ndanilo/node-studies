@@ -95,15 +95,15 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 5 — TypeScript Deep Dive
 > Goal: leverage types like C#; know where they differ.
 
-- [ ] `tsconfig.json` — `strict`, `module`, `moduleResolution`
-- [ ] Interfaces vs type aliases
-- [ ] Union and intersection types
-- [ ] Generics (`<T>`, constraints)
-- [ ] Utility types: `Partial<T>`, `Pick<T>`, `Omit<T>`, `Record<K,V>`
-- [ ] `unknown` vs `any`
-- [ ] Type narrowing (`typeof`, `instanceof`, discriminated unions)
-- [ ] Runtime validation with Zod (LLM JSON responses!)
-- [ ] Declaration files (`.d.ts`) — when you need them
+- [x] `tsconfig.json` — `strict`, `module`, `moduleResolution`
+- [x] Interfaces vs type aliases
+- [x] Union and intersection types
+- [x] Generics (`<T>`, constraints)
+- [x] Utility types: `Partial<T>`, `Pick<T>`, `Omit<T>`, `Record<K,V>`
+- [x] `unknown` vs `any`
+- [x] Type narrowing (`typeof`, `instanceof`, discriminated unions)
+- [x] Runtime validation with Zod (LLM JSON responses!)
+- [x] Declaration files (`.d.ts`) — when you need them
 
 **Exercise:** Define types for an OpenAI chat response + validate with Zod.
 
