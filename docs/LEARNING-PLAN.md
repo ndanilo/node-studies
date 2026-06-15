@@ -112,12 +112,12 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 6 — Configuration & Secrets (Applied AI)
 > Goal: production-ready config for API keys and model settings.
 
-- [ ] `process.env` and `.env` files
-- [ ] `.env.example` for team onboarding
-- [ ] Typed config module (Zod schema at startup)
-- [ ] `NODE_ENV` behavior
-- [ ] Never log secrets; redact in error messages
-- [ ] Compare: `appsettings.json` + User Secrets vs dotenv
+- [x] `process.env` and `.env` files
+- [x] `.env.example` for team onboarding
+- [x] Typed config module (Zod schema at startup)
+- [x] `NODE_ENV` behavior
+- [x] Never log secrets; redact in error messages
+- [x] Compare: `appsettings.json` + User Secrets vs dotenv
 
 **Exercise:** Build `src/config/env.ts` that validates `OPENAI_API_KEY`, `PORT`, `LOG_LEVEL`.
 
