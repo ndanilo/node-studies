@@ -126,13 +126,13 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 7 — Error Handling & Debugging
 > Goal: find bugs as fast as in Visual Studio.
 
-- [ ] `Error`, custom errors, `cause` chain
-- [ ] Sync vs async stack traces
-- [ ] Cursor/VS Code debugger: breakpoints, watch, call stack
-- [ ] `console.log` vs structured logging (`pino`)
-- [ ] Global handlers: `unhandledRejection`, `uncaughtException`
-- [ ] HTTP error mapping (4xx vs 5xx)
-- [ ] LLM-specific: rate limits, timeouts, malformed JSON
+- [x] `Error`, custom errors, `cause` chain
+- [x] Sync vs async stack traces
+- [x] Cursor/VS Code debugger: breakpoints, watch, call stack
+- [x] `console.log` vs structured logging (`pino`)
+- [x] Global handlers: `unhandledRejection`, `uncaughtException`
+- [x] HTTP error mapping (4xx vs 5xx)
+- [x] LLM-specific: rate limits, timeouts, malformed JSON
 
 **Exercise:** Add intentional bugs; practice debugging with F5.
 
@@ -141,12 +141,12 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 8 — HTTP Clients & Small APIs
 > Goal: call LLM APIs and expose your own endpoints.
 
-- [ ] Native `fetch` in Node 18+
-- [ ] Request headers, body, query params
-- [ ] Streaming responses (`ReadableStream`)
-- [ ] Express or Fastify hello-world API
-- [ ] Middleware concept (≈ ASP.NET middleware pipeline)
-- [ ] Optional: NestJS overview for DI lovers
+- [x] Native `fetch` in Node 18+
+- [x] Request headers, body, query params
+- [x] Streaming responses (`ReadableStream`)
+- [x] Express or Fastify hello-world API
+- [x] Middleware concept (≈ ASP.NET middleware pipeline)
+- [x] Optional: NestJS overview for DI lovers
 
 **Exercise:** Minimal Express server with `/health` and `/chat` proxy to OpenAI.
 

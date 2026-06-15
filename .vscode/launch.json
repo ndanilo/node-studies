@@ -16,6 +16,30 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Debug Phase 8 server",
+      "program": "${workspaceFolder}/src/phase-8/exercise.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Phase 8 fundamentals",
+      "program": "${workspaceFolder}/src/phase-8/fundamentals.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Debug hello.ts",
       "program": "${workspaceFolder}/src/phase-0/hello.ts",
       "runtimeExecutable": "tsx",

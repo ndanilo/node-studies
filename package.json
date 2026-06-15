@@ -19,6 +19,8 @@
     "phase6-exercise": "tsx src/phase-6/exercise.ts",
     "phase7": "tsx src/phase-7/fundamentals.ts",
     "phase7-exercise": "tsx src/phase-7/exercise.ts",
+    "phase8": "tsx src/phase-8/fundamentals.ts",
+    "phase8-server": "tsx src/phase-8/exercise.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
@@ -31,12 +33,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   },
   "dependencies": {
     "dotenv": "^16.4.0",
+    "express": "^5.2.1",
     "pino": "^10.3.1",
     "zod": "^3.24.0"
   }
