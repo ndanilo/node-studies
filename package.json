@@ -17,11 +17,18 @@
     "phase5": "tsx src/phase-5/fundamentals.ts",
     "phase5-exercise": "tsx src/phase-5/exercise.ts",
     "phase6-exercise": "tsx src/phase-6/exercise.ts",
+    "phase7": "tsx src/phase-7/fundamentals.ts",
+    "phase7-exercise": "tsx src/phase-7/exercise.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["nodejs", "typescript", "learning", "applied-ai"],
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "learning",
+    "applied-ai"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -30,6 +37,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.0",
+    "pino": "^10.3.1",
     "zod": "^3.24.0"
   }
 }

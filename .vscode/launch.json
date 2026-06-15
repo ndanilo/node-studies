@@ -24,6 +24,30 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Phase 7 exercise",
+      "program": "${workspaceFolder}/src/phase-7/exercise.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Phase 7 fundamentals",
+      "program": "${workspaceFolder}/src/phase-7/fundamentals.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
     }
   ]
 }
