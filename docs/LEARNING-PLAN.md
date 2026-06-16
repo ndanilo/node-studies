@@ -155,14 +155,14 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 9 — Applied AI Patterns (Node Ecosystem)
 > Goal: confidence in real AI engineering repos.
 
-- [ ] OpenAI / Anthropic SDK usage in Node
-- [ ] Prompt as code; system vs user messages
-- [ ] Token counting (conceptual)
-- [ ] Streaming tokens to client (SSE)
-- [ ] Tool / function calling flow
-- [ ] RAG basics: embed, store, retrieve (langchain.js or plain SDK)
-- [ ] Agent loops (plan → act → observe)
-- [ ] Evals and logging traces
+- [x] OpenAI / Anthropic SDK usage in Node
+- [x] Prompt as code; system vs user messages
+- [x] Token counting (conceptual)
+- [x] Streaming tokens to client (SSE)
+- [x] Tool / function calling flow
+- [x] RAG basics: embed, store, retrieve (langchain.js or plain SDK)
+- [x] Agent loops (plan → act → observe)
+- [x] Evals and logging traces
 
 **Exercise:** CLI agent in `src/phase-9/` that uses tools and streams output.
 

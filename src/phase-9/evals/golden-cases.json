@@ -1,0 +1,23 @@
+[
+  {
+    "name": "calculator_basic",
+    "expression": "(12 + 8) * 3",
+    "expected": 60
+  },
+  {
+    "name": "calculator_rejects_unsafe",
+    "expression": "process.exit(1)",
+    "expectError": true
+  },
+  {
+    "name": "chunk_text_splits_paragraphs",
+    "input": "PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit. PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit. PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit. PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit. PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit. PHASE9_ALPHA Lorem ipsum dolor sit amet consectetur adipiscing elit.\n\nPHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. PHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. PHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. PHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. PHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. PHASE9_BETA sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "minChunks": 2
+  },
+  {
+    "name": "cosine_identical_vectors",
+    "a": [1, 0, 0],
+    "b": [1, 0, 0],
+    "minScore": 0.99
+  }
+]

@@ -21,6 +21,10 @@
     "phase7-exercise": "tsx src/phase-7/exercise.ts",
     "phase8": "tsx src/phase-8/fundamentals.ts",
     "phase8-server": "tsx src/phase-8/exercise.ts",
+    "phase9": "tsx src/phase-9/fundamentals.ts",
+    "phase9-agent": "tsx src/phase-9/exercise.ts",
+    "phase9-server": "tsx src/phase-9/server.ts",
+    "phase9-evals": "tsx src/phase-9/evals/run-evals.ts",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
@@ -41,6 +45,7 @@
   "dependencies": {
     "dotenv": "^16.4.0",
     "express": "^5.2.1",
+    "openai": "^6.42.0",
     "pino": "^10.3.1",
     "zod": "^3.24.0"
   }

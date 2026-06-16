@@ -64,6 +64,42 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Debug Phase 9 agent",
+      "program": "${workspaceFolder}/src/phase-9/exercise.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Phase 9 fundamentals",
+      "program": "${workspaceFolder}/src/phase-9/fundamentals.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Phase 9 SSE server",
+      "program": "${workspaceFolder}/src/phase-9/server.ts",
+      "runtimeExecutable": "tsx",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Debug Phase 7 fundamentals",
       "program": "${workspaceFolder}/src/phase-7/fundamentals.ts",
       "runtimeExecutable": "tsx",
