@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`formatToolResults snapshots > formats empty results consistently 1`] = `"(no tool calls)"`;
+
+exports[`formatToolResults snapshots > formats multiple tool results consistently 1`] = `
+"[1] calculator
+60
+
+[2] search_docs
+[1] Phase 9 covers RAG."
+`;
