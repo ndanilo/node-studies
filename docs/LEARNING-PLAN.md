@@ -171,11 +171,11 @@ Track progress by checking boxes. Ask Cursor to teach any unchecked topic — ru
 ## Phase 10 — Testing & Quality
 > Goal: same rigor as xUnit/NUnit in C#.
 
-- [ ] Vitest or Jest basics
-- [ ] `describe` / `it` ≈ `[Fact]` / `[Theory]`
-- [ ] Mocking `fetch` and env vars
-- [ ] Snapshot testing (use sparingly)
-- [ ] ESLint + Prettier (≈ analyzers + format on save)
+- [x] Vitest or Jest basics
+- [x] `describe` / `it` ≈ `[Fact]` / `[Theory]`
+- [x] Mocking `fetch` and env vars
+- [x] Snapshot testing (use sparingly)
+- [x] ESLint + Prettier (≈ analyzers + format on save)
 
 ---
 

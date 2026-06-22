@@ -26,6 +26,9 @@
     "phase9-server": "tsx src/phase-9/server.ts",
     "phase9-evals": "tsx src/phase-9/evals/run-evals.ts",
     "phase10": "tsx src/phase-10/fundamentals.ts",
+    "phase11": "tsx src/phase-11/fundamentals.ts",
+    "phase11-server": "tsx src/phase-11/index.ts",
+    "start": "node dist/phase-11/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -35,6 +38,7 @@
     "format:check": "prettier --check \"src/**/*.ts\"",
     "dev": "tsx watch src/phase-0/hello.ts",
     "build": "tsc",
+    "build:prod": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
